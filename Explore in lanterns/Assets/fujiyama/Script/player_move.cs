@@ -12,22 +12,22 @@ public class player_move : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetAxis("Horizontal")==1)
         {
             transform.Translate(speed * Time.deltaTime,0,0);
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetAxis("Horizontal")==-1)
         {
             transform.Translate(-speed * Time.deltaTime,0, 0);
         }
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetAxis("Vertical")==1)
         {
             transform.Translate(0,speed * Time.deltaTime,0);
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetAxis("Vertical")==-1)
         {
             transform.Translate(0, -speed * Time.deltaTime, 0);
         }
