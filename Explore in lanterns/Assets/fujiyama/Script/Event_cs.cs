@@ -155,9 +155,13 @@ public class Event_cs : MonoBehaviour {
         //if (range >= 90)  //８０以上
         else
         {
-            Instantiate(oill);
-            oill.transform.position = new Vector3(pos.x, pos.y, 0);
-            seisei = false;  
+            if (seisei == true)
+            {
+                Instantiate(oill);
+                oill.transform.position = new Vector3(pos.x, pos.y, 0);
+                seisei = false;
+            }
+           
         }
 
         openflg = true;
@@ -175,7 +179,9 @@ public class Event_cs : MonoBehaviour {
             if (yumiya <= max)
             {
                 yumiya = yumiya + yuram;
+                
             }
+            print(yumiya);
 
         }
         
