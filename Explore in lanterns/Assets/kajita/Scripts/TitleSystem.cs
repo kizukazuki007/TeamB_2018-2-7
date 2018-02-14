@@ -101,4 +101,20 @@ public class TitleSystem : MonoBehaviour
     {
         SceneManager.LoadScene("MultiSetting");
     }
+
+    public void EASYMODE()
+    {
+        Difficulty = 0;
+    }
+
+    public void NORMALMODE()
+    {
+        Difficulty = 1;
+    }
+
+    public void HARDMODE()
+    {
+        Difficulty = 2;
+        Debug.Log("2");
+    }
 }
